@@ -19,6 +19,11 @@
 		3BAF5CFE292D10CF00B51DBE /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF5CFD292D10CF00B51DBE /* DateService.swift */; };
 		3BAF5D00292D10E200B51DBE /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF5CFF292D10E200B51DBE /* WeatherService.swift */; };
 		3BAF5D03292D141E00B51DBE /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF5D02292D141E00B51DBE /* WelcomePresenter.swift */; };
+		3BECF5CB293107840081F270 /* ImageViewerModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BECF5CA293107840081F270 /* ImageViewerModuleBuilder.swift */; };
+		3BECF5CD2931079F0081F270 /* ImageViewerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BECF5CC2931079F0081F270 /* ImageViewerPresenter.swift */; };
+		3BECF5CF293107B30081F270 /* ImageViewerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BECF5CE293107B30081F270 /* ImageViewerRouter.swift */; };
+		3BECF5D1293107C60081F270 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BECF5D0293107C60081F270 /* ImageViewerViewController.swift */; };
+		3BECF5D3293107DF0081F270 /* ImageViewerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BECF5D2293107DF0081F270 /* ImageViewerInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,11 @@
 		3BAF5CFD292D10CF00B51DBE /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		3BAF5CFF292D10E200B51DBE /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		3BAF5D02292D141E00B51DBE /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		3BECF5CA293107840081F270 /* ImageViewerModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerModuleBuilder.swift; sourceTree = "<group>"; };
+		3BECF5CC2931079F0081F270 /* ImageViewerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerPresenter.swift; sourceTree = "<group>"; };
+		3BECF5CE293107B30081F270 /* ImageViewerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerRouter.swift; sourceTree = "<group>"; };
+		3BECF5D0293107C60081F270 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
+		3BECF5D2293107DF0081F270 /* ImageViewerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,7 @@
 				3BAF5CF5292D0EC100B51DBE /* Application */,
 				3BAF5CF8292D0EDC00B51DBE /* API */,
 				3BAF5CF6292D0ED000B51DBE /* WelcomeModule */,
+				3BECF5C9293106400081F270 /* ImageViewer */,
 				3BAF5CF9292D0EE400B51DBE /* Resourses */,
 				3BAF5CFC292D0FD400B51DBE /* ReadMe.md */,
 			);
@@ -117,6 +128,18 @@
 				3BAF5CEF292D0E8A00B51DBE /* Info.plist */,
 			);
 			path = Resourses;
+			sourceTree = "<group>";
+		};
+		3BECF5C9293106400081F270 /* ImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				3BECF5CA293107840081F270 /* ImageViewerModuleBuilder.swift */,
+				3BECF5CC2931079F0081F270 /* ImageViewerPresenter.swift */,
+				3BECF5CE293107B30081F270 /* ImageViewerRouter.swift */,
+				3BECF5D0293107C60081F270 /* ImageViewerViewController.swift */,
+				3BECF5D2293107DF0081F270 /* ImageViewerInteractor.swift */,
+			);
+			path = ImageViewer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,15 +213,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BECF5CF293107B30081F270 /* ImageViewerRouter.swift in Sources */,
 				3BAF5D00292D10E200B51DBE /* WeatherService.swift in Sources */,
+				3BECF5D1293107C60081F270 /* ImageViewerViewController.swift in Sources */,
 				3B8F5F3A292D1906000421CD /* WelcomeInteractor.swift in Sources */,
 				3BAF5D03292D141E00B51DBE /* WelcomePresenter.swift in Sources */,
+				3BECF5CD2931079F0081F270 /* ImageViewerPresenter.swift in Sources */,
 				3BAF5CE6292D0E8700B51DBE /* WelcomeViewController.swift in Sources */,
 				3BAF5CE2292D0E8700B51DBE /* AppDelegate.swift in Sources */,
 				3B8F5F3D292D19E6000421CD /* WelcomeModuleBuilder.swift in Sources */,
 				3B8F5F37292D179C000421CD /* WelcomeRouter.swift in Sources */,
 				3BAF5CE4292D0E8700B51DBE /* SceneDelegate.swift in Sources */,
 				3BAF5CFE292D10CF00B51DBE /* DateService.swift in Sources */,
+				3BECF5D3293107DF0081F270 /* ImageViewerInteractor.swift in Sources */,
+				3BECF5CB293107840081F270 /* ImageViewerModuleBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

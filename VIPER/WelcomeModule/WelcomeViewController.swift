@@ -16,6 +16,7 @@ protocol WelcomeViewProtocol: AnyObject {
 class WelcomeViewController: UIViewController {
     var dateLabel: UILabel!
     var weatherLaber: UILabel!
+    var button: UIButton!
     var presenter: WelcomePresenterProtocol?
 
     override func viewDidLoad() {
@@ -23,12 +24,13 @@ class WelcomeViewController: UIViewController {
         view.backgroundColor = .white
         createDateLabel()
         createWeatherLabel()
+        createButton()
         presenter?.viewDidLoaded()
         
     }
     
     func createDateLabel() {
-        dateLabel = UILabel(frame: CGRect(x: 100, y: 400, width: 200, height: 30))
+        dateLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
         dateLabel.center = view.center
         dateLabel.numberOfLines = 1
         dateLabel.lineBreakMode = .byWordWrapping
@@ -52,6 +54,16 @@ class WelcomeViewController: UIViewController {
         view.addSubview(weatherLaber)
     }
     
+    func createButton() {
+        button = UIButton(frame: CGRect(x: 145, y: 600, width: 100, height: 23))
+        button.backgroundColor = .gray
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchDown)
+        view.addSubview(button)
+    }
+    
+    @objc func buttonTapped() {
+        presenter?.didTappedImageButton()
+    }
 
 
 }

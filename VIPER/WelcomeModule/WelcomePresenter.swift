@@ -9,6 +9,7 @@ import Foundation
 
 protocol WelcomePresenterProtocol: AnyObject {
     func viewDidLoaded()
+    func didTappedImageButton() //ответственность вьюхи просто зафиксировать событие нажатия
     func didLoad(date: String?)
     func didLoad(weather: Int?)
 }
@@ -27,6 +28,11 @@ class WelcomePresenter {
 
 
 extension WelcomePresenter: WelcomePresenterProtocol {
+    func didTappedImageButton() {
+        let temperature = interactor.temperature
+        router.openImage(for: temperature)
+    }
+    
     func viewDidLoaded() {
         //start loading info
         interactor.loadDate()
